@@ -38,11 +38,11 @@ class App extends Component{
 	componentDidMount(){
 		const userID = Math.round(Math.random() * 1000000);
 		this.props.setCurrentUserID(userID);
-		this.PUBNUB = new PubNub({
-			publishKey: publishKey,
-			subscribeKey: subscribeKey,
+		this.PUBNUB = PubNub.init({
+			publish_key: publishKey,
+			subscribe_key: subscribeKey,
 			ssl: (location.protocol.toLowerCase() === 'https:'),
-			secretKey: secretKey
+			secret_key: secretKey
 		});
 		this.PUBNUB.subscribe({
 			channel: 'ReactChat',
