@@ -1,3 +1,3 @@
-export const publishKey = 'pub-c-d101e612-524a-4586-bd06-4d0c3b0be20a';
-export const subscribeKey = 'sub-c-4520bd66-cf50-11e6-979a-02ee2ddab7fe';
-export const secretKey = 'sec-c-ZTg2NTQ4ZWQtMjI1ZS00ZmJhLTg4NTQtYTEzYTI5ZGEyNjNi';
+export const publishKey = 'pub-c-9995dff3-44b6-42ba-93e3-3948ddb9aded';
+export const subscribeKey = 'sub-c-3cd56ac6-cf50-11e6-b045-02ee2ddab7fe';
+export const secretKey = 'sec-c-YjgxYmQxNzQtMDFmYy00MGE3LTk3YzgtNjJlMWVkMjgzMDIz';
