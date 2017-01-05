@@ -12,6 +12,7 @@ export default function chatReducer(state = INITIAL_STATE, action = {}){
         case SET_CURRENT_USERID:
             return state.update('userID', () => action.payload);
         case ADD_MESSAGE:
+            soundBell(action.payload, state);
             return state.update('messages', (messages) => messages.concat(action.payload));
         case ADD_HISTORY:
             return state
@@ -19,5 +20,12 @@ export default function chatReducer(state = INITIAL_STATE, action = {}){
             .update('lastMessageTimestamp', () => action.payload.timestamp);
         default:
             return state;
+    }
+}
+
+function soundBell(message, state){
+    const otherUserID = state._root.entries[0][1];
+    if(otherUserID && message.who && message.who !== otherUserID){
+        document.getElementById('audioElement').play();
     }
 }
