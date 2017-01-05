@@ -8,6 +8,7 @@ export function setCurrentUserID(userID){
 }
 
 export function addMessage(message){
+    document.getElementById('audioElement').play();
     return {
         type: ADD_MESSAGE,
         payload: message
