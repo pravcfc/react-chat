@@ -1,7 +1,7 @@
 {
   "name": "reactChat",
   "version": "0.1.0",
-  "private": true,
+  "author": "praveen selvaraj",
   "dependencies": {
     "react-scripts": "0.8.4",
     "immutable": "^3.8.1",

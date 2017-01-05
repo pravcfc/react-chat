@@ -27,6 +27,16 @@ export default class ChatHistory extends Component{
         this.scrollToBottom();
     }
 
+    componentWillUpdate(nextProps){
+        this.historyChanged = nextProps.history.length !== this.props.history.length;
+        if(this.historyChanged){
+            const {messageList} = this.refs;
+            const scrollPos = messageList.scrollTop;
+            const scrollBottom = (messageList.scrollHeight - messageList.clientHeight);
+            this.scrollAtBottom = (scrollBottom <= 0) || (scrollPos === scrollBottom);
+        }
+    }
+
     render(){
         const {props, onScroll} = this;
         return (
